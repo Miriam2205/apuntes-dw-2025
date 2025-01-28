@@ -47,7 +47,16 @@ header a li{
 /*selector del siguiente hijo*/
 p+a{ }
 
+/*Display inline*/
 
+/*Display block*/
+hace un salto de linea y respeta el hedding
+
+/*display inline-block*/
+las pone en linea pero respta los tamaños 
+
+/*display none*/
+esconde elementos
 
 
 ```html 

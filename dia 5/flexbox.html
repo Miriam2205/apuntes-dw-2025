@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #eb9d37;
+            border: 4px solid black;
+            box-shadow: inset 10px 10px 10px rgb(253,200,102); /* inset sombra interna */
+            border-radius: 255px 15px 225px 15px/1px 2px 3px 4px;
+/* propiedades de CSS standard */
+            color: rgb(43, 41, 41);
+            filter: drop-shadow(  2px 2px 2px rgba(0,0,0,0.5)  );
+            
+            /*centrar contenido*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxDouble {
+            width: 200px;
+        }
+        .purpleBox{
+            background: purple;
+            padding: 5px;
+            height: 250px;
+        }
+        .flexx {
+            /*Propiedades de flex*/
+            display: flex;
+            gap: 4px;
+
+            /*propiedades de css*/
+            color: white;
+            filter: drop-shadow(2px 2px 2px rgba (0,0,0,0,5));
+            font-size: x-large;
+            font-weight: bold;
+            
+
+        }
+
+        .ej1 {
+flex-direction: row;
+flex-direction: column;
+        }
+
+        .ej2 {
+            
+            flex-flow: row-wrap;
+        }
+        
+        .ej3 {
+            flex-direction:column;
+            height:500px;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content:center;
+            justify-content:space-evenly; /*todos por igual*/
+            justify-content:space-between;
+            justify-content:space-around; /*laterales 1/2 de los centrales*/
+        }
+    </style>
+</head>
+<body>
+    
+<h3>Flex Direction</h3>
+
+<p>Direccion y seleccion del eje PRINCIPAL de nuestros elementos hijos. Opciones de row, column, row-reserve y column-reserve</p>
+
+<div class="flexx ej1">
+   
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+</div>
+
+<h3>Flex wrap</h3>
+
+<p>Controla si los elementos se ajustan a la misma fila o se desplaza a la siguiente. Conserva el width y height de los elementos. Opciones: nowrap, wrap, wrap-reserve</p>
+<br>Podemos utilizar flex-flow: row wrap</br> para combinar elementos (flex-direction +wrap)
+<div class="flexx ej2 purpleBox">
+   
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box boxDouble">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+</div>
+
+<h3>Justify content</h3>
+<div class="flexx ej3 purpleBox">
+    <div class="box boxDouble">1 d</div>
+    <div class="box ">2 d</div>
+    <div class="box boxDouble">3 d</div>
+</div>
+</body>
+</html>
