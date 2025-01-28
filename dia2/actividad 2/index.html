@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yorkshire</title>
+
+    <style>
+        body {
+            background: burlywood;
+        }
+    
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(46, 26, 7);
+            color: white;
+        }
+        #tabla-container {
+        text-align: center;
+        }
+
+        #imagen-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw; 
+        height: 100vh; 
+        margin-top: 60px;
+    
+        }
+
+         img {
+        width: 70%; 
+        height: auto; 
+        max-height: 100%; 
+        object-fit: cover; 
+        }
+
+        .presentacion, .hobbies {
+            width: 400px;
+            height: 300px;
+            background-color: rgb(104, 65, 43);
+            color: white;
+            border: 8px solid rgb(46, 26, 7);
+            padding: 10px;
+            margin: 10px;
+            display: inline-table;
+            justify-content: center;
+            margin-left: 15%;
+    
+            }
+
+        ol,ul{
+            margin-left: 40%;
+        }
+        
+        th{
+         background-color: rgb(112, 71, 43);
+         color:antiquewhite;
+        }
+
+        #actividades-titulo, #alimentos-titulo{
+            text-align: center;
+            
+        }
+
+        #tabla-info th, #tabla-info td {
+        border: 2px solid black; 
+        padding: 20px; 
+        text-align: center; 
+        margin: 0 auto; 
+        width: 5%; 
+        border: 4px solid rgb(54, 32, 20); 
+        font-size: 2 rem; 
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div id="header">
+        <h1 id="titulo-principal">Hola, soy Kuki</h1>
+    </div>
+    <!--Presentacion-->
+
+    <div id="imagen-container">
+        <img id="soykuki" src="./soykuki.jpg" alt="yorkshire">
+    </div>
+
+    
+        <div class="presentacion">
+            <h2>Mi historia</h2>
+            <p>Hola, soy <strong>Kuki</strong>. <br>Soy un Yorkshire macho que tiene 9 años en edad perruna. Hace tres años que entré en una nueva casa, en principio solo era temporal ya que mi casa estaba en reformas y mis dueños creyeron que era mejor quedarme en casa de unos conocidos. Es entonces cuando en la nueva casa me di cuenta que era más feliz. Me sacaban tres veces al día(con los otros dueños no) me dejaban por el parque para que pudiera oler etc. Era más feliz con la nueva casa. Es entonces cuando mis nuevos dueños me empezaron a coger cariño y yo a ellos y entonces me adoptaron. Ya llevo tres años con mi nueva familia y soy más que feliz .</p>
+        </div>
+
+        <div class="hobbies"> 
+            <h2>Hobbies</h2>
+            <p>Soy muy inquieto y jugueton. <br> Mi hobbie favorito es salir a la calle, ir a un parque y jugar con la pelota. Además de eso me gusta olfatear las cosas y relacionarme con otros perros. <br>Tengo una mejor amiga que se llama Chloe y también es un Yorkshire.</p>
+        </div>
+    </div>
+
+    <!--Tabla-->
+    <div id="tabla-container">
+        <h1>Información de Kuki</h1>
+        <table id="tabla-info" border="1">
+            <thead>
+                <tr>
+                    <th>Edad</th>
+                    <th>Raza</th>
+                    <th>Color</th>
+                    <th>Personalidad</th>
+                    <th>Alimento Favorito</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9 años</td>
+                    <td>Yorkshire</td>
+                    <td>Marrón con gris</td>
+                    <td>Inquieto</td>
+                    <td>Pollo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<!--Lista ordenada-->
+    <div id="actividades-container">
+        <h1 id="actividades-titulo">Mis actividades favoritas</h1>
+        <ol id="lista-actividades">
+            <li>Jugar en el parque con mi pelota favorita</li>
+            <li>Jugar con otros perros y que mi ama converse con los dueños</li>
+            <li>Ir al río a refrescarnos en un día caluroso</li>
+            <li>Ir a cortarme el pelo a una peluquería</li>
+            <li>Jugar en casa con un peluche en un día lluvioso</li>
+        </ol>
+    </div>
+
+<!--Lista desordenada-->
+    <div id="alimentos-container">
+        <h1 id="alimentos-titulo">Mis alimentos favoritos</h1>
+        <ul id="lista-alimentos">
+            <li>Manzana</li>
+            <li>Pollo con verduras</li>
+        </ul>
+    </div>
+
+    <!--Link galeria-->
+    <a href="./galeria.html" target:"_blank">Galeria</a>
+</body>
+</html>
