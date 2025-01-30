@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Horizontal</title>
+    <style>
+
+
+        /* Reset CSS( sirve para eliminar los atributos visuales de los navegadores) */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+        /*Estilos de mi web*/
+    .container {
+    display:flex;
+    background: rgb(199, 199, 24);
+    height: 100vh; 
+    }
+
+    .sidebar{
+width: 250px;
+padding: 20px;
+background-color: rgb(213, 245, 126);
+    }
+    .sidebar ul{ 
+        list-style: none;
+    }
+    .sidebar ul li a{ 
+        text-decoration: none;
+        color: black;
+    }
+    .sidebar ul li a:hover {
+        color: teal;
+    }
+    .main-content{
+padding: 10px;
+    }
+        
+    </style>
+    <body>
+</head>
+<body>
+
+ <!--
+ /* ul>li*3{Elemento $}+li>a[href="./index.html"]{Home}
+ 
+  .   clases
+            #   id
+            >   nos metemos dentro de la etiqueta
+            *   multiplica los elementos
+            {}  escriben texto
+            {$} agregan un número a cada item
+            +   agregar una etiqueta hermana (sibling)
+            []  acceden a los atributos
+ -->
+<!--Shortcut en enmet
+div.main-content>h1{Contenido Principal}+p{Lorem}
+-->
+
+        <body>
+            <div class="container">
+                <div class="sidebar">
+                    <ul>
+                        <li>Elemento 1</li>
+                        <li>Elemento 2</li>
+                        <li>Elemento 3</li>
+                        <li><a href="./index.html">Home</a></li>
+                    </ul>
+                </div>
+        
+                <div class="main-content">
+                    <h1>Contenido Principal</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis at laborum minima reiciendis
+                        animi aspernatur magn
+        animi aspernatur magnam! Quaerat dicta maiores ipsa ratione enim qui velit sunt culpa, sint vero
+                        aliquid.</p>
+                </div>
+                
+        
+    
+
+</body>
+</html>

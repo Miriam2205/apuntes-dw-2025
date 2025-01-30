@@ -26,11 +26,13 @@
         .boxDouble {
             width: 200px;
         }
+
         .purpleBox{
             background: purple;
             padding: 5px;
             height: 250px;
         }
+
         .flexx {
             /*Propiedades de flex*/
             display: flex;
@@ -42,12 +44,11 @@
             font-size: x-large;
             font-weight: bold;
             
-
         }
 
         .ej1 {
-flex-direction: row;
-flex-direction: column;
+        flex-direction: row;
+        flex-direction: column;
         }
 
         .ej2 {
@@ -64,11 +65,51 @@ flex-direction: column;
             justify-content:space-evenly; /*todos por igual*/
             justify-content:space-between;
             justify-content:space-around; /*laterales 1/2 de los centrales*/
-            
-           
            
         }
+        .blueBox{
+        background: rgb(124, 198, 221);
+        height:250px;
+        padding:5px;
+        
+         }
+    
+         .align{
+         display: flex;
+         font-size: x-large;
+         }
+
+        .ej5 {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .ej6{
+        justify-content: space-around;
+        align-content:flex-start;
+        flex-wrap: wrap;
+         }
+
+        .ej7{
+        display: flex;
+        align-items: flex-start;
+         }
+
+        .purple{
+        order: -1;
+        align-self: flex-end;
+        }
+
+        .ej8{
+        flex-grow:inherit;
+        .box1 { flex-grow: 1; } /* Crecerá proporcionalmente */
+        .box2 { flex-grow: 2; } /* Crecerá el doble que .box1 */
+        .box3 { flex-grow: 1; } /* Crecerá igual que .box1 */
+    }
+
     </style>
+
+
 </head>
 <body>
     
@@ -105,6 +146,46 @@ flex-direction: column;
     <div class="box boxDouble">1 d</div>
     <div class="box ">2 d</div>
     <div class="box boxDouble">3 d</div>
+</div>
+
+<h3>Align Items</h3>
+<p>Alinea los elementos dentro del contenedor a lo largo del eje transversal</p>
+    <div class="align ej5 blueBox">
+   
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        
+    </div>
+
+
+    <h3>Align Content</h3>
+    <p> Alinea las líneas de elementos dentro del contenedor cuando hay varias filas</p>
+    <div class="align ej6 blueBox">
+   
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+</div>
+
+
+    <h3>Order</h3>
+    <p> Se puede cambiar el orden de un item. Por defecto el numero es el 0.</p>
+    <div class="align ej7 blueBox">
+   
+        <div class="box">1</div>
+        <div class="box purple">2</div>
+        <div class="box">3</div>
+</div>
+
+
+    <h3>Flex grow</h3>
+    <p> Permite que un elemento flexible crezca dentro de un contenedor flex cuando hay espacio disponible.</p>
+    <div class="align ej8 blueBox">
+   
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
 </div>
 </body>
 </html>
