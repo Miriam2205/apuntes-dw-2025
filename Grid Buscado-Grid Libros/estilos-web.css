@@ -27,6 +27,7 @@
 }
 h3, h4{
     font-family:Arial, Helvetica, sans-serif;
+    padding: 10px;
 }
 p{
     font-family: Arial, Helvetica, sans-serif;
@@ -49,7 +50,7 @@ p{
     margin-right: 20px;
 }
 .content{
-    padding: 40px;
+    padding: 60px;
     margin-top: 20px;
 }
 #usuario{
@@ -83,6 +84,31 @@ margin-top: 70px;
 .grid-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    
+}
+.Card img {
+    object-fit: cover; /* Evita distorsión */
+    margin-top: 40px;
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Evita distorsión */
+    
+
+}
+.Card {
+    
+    margin-top: 30px;
+    color: white;
+    padding: 20px;
+    flex-grow: 1; /*esta regla permite al box crecer */
+    flex-shrink: 0; /*esta regla permite ser más pequeña */
+    flex-basis: 200px; /* valor inicial */
+    flex: 1 0 200px; /*Esto es igual a las 3 de arriba */
+    border-radius:40px ;
+    box-shadow: 2px 2px 5px #bbbbbb;
+}
+img {
+    width: 200px;
+    height: auto; /* Mantiene la proporción */
     
 }
