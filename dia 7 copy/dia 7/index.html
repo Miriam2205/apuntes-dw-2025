@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Cuadricula</title>
+    <style>
+        /*Reset de CSS */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        .grid-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .Card{
+            background-color: gray;
+            color: white;
+            padding: 20px;
+            flex-grow: 1; /*esta regla permite al box crecer */
+            flex-shrink: 0; /*esta regla permite ser más pequeña */
+            flex-basis: 200px; /* valor inicial */
+            flex: 1 0 200px; /*Esto es igual a las 3 de arriba */
+        }
+        
+        
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="grid-container">
+        <!--div.card*6>{Targeta $}-->
+        <div class="Card">Targeta 1</div>
+        <div class="Card">Targeta 2</div>
+        <div class="Card">Targeta 3</div>
+        <div class="Card">Targeta 4</div>
+        <div class="Card">Targeta 5</div>
+        <div class="Card">Targeta 6</div>
+    </div>
+
+</body>
+</html>
