@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+.header{
+
+background: #435a3b;
+padding: 30px;
+display: flex;
+justify-content: space-between;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 12pt;
+}
+
+        #logo {
+            width: 90px;
+            border-radius: 50%;
+        }
+        #menu{ 
+            width: 500px;
+            display: inline;
+            display: flex;
+            justify-content: end;
+            padding-top: 30px;
+            padding-right: 30px;
+            gap: 50px;
+            
+        }
+        .menuoptions{
+            color: #435a3b;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 10pt;
+            box-sizing: border-box;
+            width: 200px;
+            height: 35px;
+            text-align: center;
+            padding-top: 8px;
+            border-color: #253122;
+            background-color: white;
+            border-radius: 3pt;
+        
+        }
+
+        
+        .container{
+            display:flex;
+            flex-direction: column;
+            height: 100vh;
+        
+        }
+        
+h3, h4{
+font-family:Arial, Helvetica, sans-serif;
+margin: 20px;
+}
+p{
+font-family: Arial, Helvetica, sans-serif;
+}
+        
+.content{
+padding: 40px;
+margin-top: 20px;
+}
+        #usuario{
+            width: 170px;
+            height: 170px;
+            display: flex;
+            padding: 10px;
+        }
+        .usuario{
+            display: flex;
+        }
+        .estrella{
+            height: 20px;
+            width: auto;
+            padding: 0px;
+            margin-left: 20px;
+        }
+        .estrellas{
+            padding: 0px;
+        }
+
+        .menu ul {
+    display: flex;
+    flex-direction: column; /* Hace que los enlaces estén en vertical */
+    gap: 30px; /* Espacio entre cada enlace */
+    flex-direction: row;
+    margin-top: 100px;
+    
+    }
+
+    a{
+        color: black;
+    }
+    .grid-container {
+            width: 100%;
+            max-width: 1100px;
+            margin-top: 60px auto;
+            display: flex;
+            grid-template-columns: repeat(auto-fit, nimax(280px, 1fr)); 
+            }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #81a288;
+}
+
+.caja-registro{
+    width: 600px;
+    padding: 30px;
+    background-color: #fff ;
+    color: #81a288;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+.caja-registro h2 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.formulario{
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 3px solid #81a288;
+    font-size: 20px;
+}
+
+.caja-registro p{
+    font-size: 20px;
+    margin-bottom: 10
+    px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.caja-registro a{
+    color: #81a288;
+    text-decoration: none;
+}
+
+.caja-registro a:hover {
+    color: #81a288;
+    text-decoration: underline;
+}
+
+.botones{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #81a288;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.sube-libro{
+    padding: 30px;
+    
+}
+
+.check{
+    margin-left: 5px;
+    outline: 3px solid 81a288;
+}
