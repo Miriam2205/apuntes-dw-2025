@@ -1,0 +1,8 @@
+body{
+    background-color: lightgreen;
+}
+@media screen and (orientation: landscape) {
+    body{
+        background-color: lightblue;
+    }
+}
