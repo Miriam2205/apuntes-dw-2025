@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web semantica</title>
+</head>
+<body>
+    <h1>Web Semantica</h1>
+    <h3>Elementos con significado</h3>
+    Ejemplos de etiquetas no semanticas: Div, Span <br />
+    Ejemplos de etiquetas semanticas: Table, from, article <br />
+
+    <img src="https://assets.hongkiat.com/uploads/html-5-semantics/document-outline-example.jpg">
+    <p>
+        <h3>Header</h3>
+        Es el encabezado de una pagina, seccion o articulo. Incluye elementos como el logo, texto introductorio, menus de navegacion. Puede haber multiples headers en una pagina, pero no puede haber un header dentro de un footer, o de otro header.
+    </p>
+
+    <p>
+    <h3>Footer</h3>
+    Es el pie de pagina de un sitio o seccion. Puede haber multiples por pagina. Puede incluir informacion como: 
+    <ul>
+        <li>Informacion de contacto </li>
+        <li>Enlaces de la RSS</li>
+        <li>Mapa del sitio</li>
+        <li>Creditos</li>
+        <li>Formulario de contacto</li>
+    </ul>
+    </p>
+
+    <p>
+        <h3>Nav</h3>
+        Define un conjunto de enlaces de Navegacion. No todos los links deben estar dentro de un Nav
+    </p>
+    <p>
+        <h3>Main</h3>>
+        Crea un cotenedor para el contenido principal de nuestra pagina. Este debe ser unico y no debe inluir contenido repetido de otras secciones,como por ej del sidebar, logos, etc. No puede ser hijo de etiquetas como: artcle, aside, footer, header o nav
+    </p>
+    <p>
+        <h3>Aside</h3>
+        Define el contenido relacionado indirectamente con el contenido principal, como por ejemplo un sidebar.Elementos que solemos poner en un aside:
+        <ul>
+            <li>Publicidad</li>
+            <li>Biografia el autor</li>
+            <li>Enlaces relacionados</li>
+            <li>Informacion de Perfil</li>
+        </ul>
+    </p>
+    <p>
+        <h3>Section</h3>
+        Define una seccion en una pagina donde se agrupa los contenidos relacionados, y normalmente incluyen un titulo <br />
+        Una web se compone de varias secciones, cada una con su contenido y proposito
+    </p>
+    <p>
+        <h3>Article</h3>
+        Define un contenido independiente . El mismo puede ser compartido o reutilizado en otro sitio sin requerir contexto <br />
+        Tambien suele incluir un titulo <br />
+        Ejemplos de uso:
+        <ul>
+            <li>Un post de un blog</li>
+            <li>Un articulo de una revista</li>
+            <li>Comentario de un usuario (Reseña)</li>
+            <li>Tarjeta de producto</li>
+        </ul>
+    </p>
+    <p>
+        Puedo encontrar articulos dentro de secciones y secciones dentro de articulos. Un articulo puede tener multiples secciones. Un aseccion puede tener multiples articulos 
+    </p>
+    <p>
+        <h3>Figure</h3>
+        Define elementos autocontenidos, como puede ser una imagen, un diagrama, una tabla o una foto <br />
+        Dentro de ella , se suele utilizar la etiqueta  "figcaption"para escribir contenido
+
+        <figure>
+            <img src="./ruta-a-imagen.png" alt="soy una imagen">
+            <figcaption></figcaption>
+        </figure>
+    </p>
+
+    <P>
+        <h3>Mark</h3>
+        Define un texto resaltado, normalmente 
+    </P>
+</body>
+</html>

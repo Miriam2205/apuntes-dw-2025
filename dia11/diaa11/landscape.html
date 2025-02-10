@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -65,72 +65,3 @@
     </picture>
 </body>
 
-=======
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Queries Landscape/Portrait</title>
-    <style>
-        body {
-            background-color: lightblue;
-            text-align: center;
-        }
-
-        .page__title {
-            font-size: 20px;
-            color: darkblue;
-        }
-
-        .page__image {
-            width: 100%;
-            max-width: 300px;
-        }
-        /*Tablet*/
-        @media only screen and (min-width: 768px) {
-            body {
-                background-color: lightgreen;
-            }
-
-            .page__title {
-                content: "Título para tablet";
-                font-size: 24px;
-            }
-
-            .page__image {
-                content: url("img/tablet.jpg");
-            }
-        }
-
-        /* Desktop */
-        @media only screen and (min-width: 1024px) {
-            body {
-                background-color: lightcoral;
-            }
-
-            .page__title::before {
-                content: "Título para desktop";
-            }
-
-            .page__image {
-                content: url("img/desktop.jpg");
-            }
-        }
-    </style>
-
-</head>
-
-<body class="page">
-    <h1 class="page__title">Título para móvil</h1>
-    <img class="page__image" src="img/mobile.jfif" alt="Imagen para móvil">
-    <picture>
-        <source srcset="img/desktop.jpg" media="(min-width: 1024px)">
-        <source srcset="img/tablet.jpg" media="(min-width: 768px)">
-        <img src="img/mobile.jpg" alt="Imagen adaptable">
-    </picture>
-</body>
-
->>>>>>> 7a854e08826001e3318e0e3ec25b1cce2fd36ac8
-</html>

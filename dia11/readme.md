@@ -69,10 +69,10 @@ Ejemplo de impresion
 
 ## Mobile First
 Intentamos desarrollar siempre primero para el movil, y luego para pantallas mas grandes. De esta manera nos aseguramos de que se vea bien en dispositivos móviles.
-[2024]()
--Mobile (55%): 320px-488px
--Tablets (2%): 768px-1024px
-Desktop (43%): 1024px-1920px
+2024
+-Mobile 55%: 320px-488px
+-Tablets 2%: 768px-1024px
+Desktop (43%: 1024px-1920px
 
 ```css
 /*Mobile first*/
@@ -83,11 +83,36 @@ Desktop (43%): 1024px-1920px
 /*reglas para tablet*/
 }
 
+## Utilizarlo en HTML
+Podemos utilizarlo los MQ directamente en nuestro html con el atributo "media".Antes 
+
+Ejemplos no recomendados:
+```html
+<link rel=stylesheet" media="screen and (min-width: 600px)" href=./css>
+
 # Ejemplo de media queries en Imagenes (usando Picture)
 
 ```html
 <picture>
     <source media="(min-width: 650px)" srcset="./img/grande.jpg">
     <source media="(min-width: 650px)" srcset="./img/grande.jpg">
-    <img src=".foto-pequeña.jpg" alt="Mi mascota">
+    <img src="./img/foto-pequeña.jpg" alt="Mi mascota">
 </picture>
+
+
+## Trucos para un buen responsive
+-Utilizar medidas relativas (%, vw, vh, em, rem) tratar de no utlizar px
+- No utilizar etiquetas de Height
+
+## Comprobacion de nuestro responsive + Media queries
+-Utlizar el inspector de elementos de chrome
+-Probarla en nuestro dispositivo
+-Usar el app responsively para probar pantallas simultaneas
+
+## Links de Interés
+
+[CSS MQ w3Schools](https://www.w3schools.com/css/css3_mediaqueries.asp)
+[Responsive Design w3Schools](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
+[Responsive Design MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
+[SCSS + MQ](https://www.freecodecamp.org/news/learn-css-media-queries-by-building-projects/)
+
