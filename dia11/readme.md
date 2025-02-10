@@ -1,3 +1,4 @@
+
 # Que es una Media Query (MQ)
 
 -Declaraciones en css que nos permite definir que arreglas aplicar a partir de unas reglas asignadas por nosotros.
@@ -90,4 +91,3 @@ Desktop (43%): 1024px-1920px
     <source media="(min-width: 650px)" srcset="./img/grande.jpg">
     <img src=".foto-pequeña.jpg" alt="Mi mascota">
 </picture>
-```

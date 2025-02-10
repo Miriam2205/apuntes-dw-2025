@@ -1,3 +1,4 @@
+
 # Media Queries!
 
 ## Actividad
@@ -18,4 +19,3 @@
 
 ## Opcionales
 - transition de color de background
-- transition opacidad y visibilidad de títulos
