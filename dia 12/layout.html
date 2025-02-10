@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Actividad layout full con flexbox y position</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #222222;
+        }
+        .container{
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 20px;
+            
+        }
+        .item {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .header{
+            background-color: #6C52D9;
+            border: 6px solid black;
+            margin: 20px;
+            padding: 50px;
+            position: fixed;
+            width: 100%;
+            height: auto;
+            color: white;
+            text-align: center;
+        }
+        .main{
+            flex-direction: row;
+            display: flex;
+            padding-top: 170px;
+            margin-top: 20px;
+        }
+        .sidebar {
+            background-color: #43d3d3;
+            border: 6px solid black;
+            width: auto;
+            height: 430px;
+            margin:20px;
+            color: white;
+            padding: 60px;
+        }
+        .content{
+            display:flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .content__fila{
+            display: flex;
+            flex-direction: row;
+        }
+        .item__content1{
+            display: flex;
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .item__content2, .item__content3{
+            flex-direction: row;
+            display: flex;
+            width: 100%;
+            height:380px;
+            margin-top: 20px;
+            margin: 15px;
+            text-align: center;
+        }
+        .footer{
+            background-color: #6C52D9;
+            border: 6px solid black;
+            margin: 20px;
+            width: 100%;
+            height: auto;
+            color: white;
+            padding: 50px;
+        }
+        img{
+            width: 40px;
+        }
+        .bottomright{
+            bottom:10px;
+            right:10px;
+            position: fixed;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+
+        <header class="header">
+            <h3>Header</h3>
+        </header>
+
+        <main class="main">
+            <aside class="sidebar">Sidebar</aside>
+            <article class="content">
+                <div class="item item__content1">Content-1</div>
+                <div class="content__fila">
+                    <div class="item item__content2">Content-2</div>
+                    <div class="item item__content3">Content-3</div>
+                </div>
+            </article>
+    </div>
+        <footer class="footer">Footer</footer >
+        <div class="bottomright">
+            <img src="./whatsapp.png" alt="whatshap">
+        </div>
+</body>
+</html>
