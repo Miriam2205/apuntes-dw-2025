@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarta cheesecake</title>
+    <link rel="stylesheet" href="./css/estilos4.css">
+
 </head>
+
 <body>
     <header class="header">
-        <img src="logo.png" alt="logo">
-        <nav>
-            <ul>
+        <div class="logo">
+            <img src="." alt="logo">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav--list">
                 <li>Recetas</li>
                 <li>Reseñas</li>
+                <li>Galería</li>
                 <li>Perfil</li>
             </ul>
         </nav>
     </header>
     <main class="main">
-        <article class="Descripcion">
-            <section class="Descripcion">
-              <picture>
-              <img src="./img/receta-cheesecake-1.jpg"  alt="cheesecake">
-            <figcaption>Tarta cheesecake cremosa</figcaption>
-              </picture>
-              <h2>Descripcion</h2>
-              <p>Tarta de cheescake super cremosa y riquisima.</p>
+        <article class="cheesecake">
+            <picture>
+                <img class="cheesecake-img" src="./img/receta-cheesecake-1.jpg" alt="cheesecake">
+                <figcaption>Tarta cheesecake cremosa</figcaption>
+            </picture>
+            </section>
+            <section class="receta">
+                <section class="cheesecake__detalles">
+                    <section class="Ingredientes">
+                        <h2 class="Ingredientes__list">Ingredientes</h2>
+                        <ul>
+                            <li>130gr de queso crema</li>
+                            <li>250gr de mascarpone</li>
+                            <li>80gr de mantequilla</li>
+                            <li>60gr de azúcar</li>
+                            <li>150gr de galletas Maria</li>
+                            <li>1 Limón</li>
+                        </ul>
+                    </section>
 
+                    <section class="Instrucciones">
+                        <h2 class="Instrucciones__list">Instrucciones</h2>
+                        <ol>
+                            <li><strong>Base crujiente</strong><br>
+                                Tritura las galletas hasta obtener una textura arenosa.
+                                Mezcla con la mantequilla derretida y presiona la mezcla en el fondo de un molde
+                                desmontable (20 cm).
+                                Refrigere mientras prepara el relleno.
+                            </li>
+                            <li><strong>Relleno ultra cremoso</strong><br>
+                                Bate el queso crema y el mascarpone hasta que quede suave.
+                                Agrega el azúcar y la ralladura de limón.
+                                Incorpora los huevos de uno en uno, sin batir en exceso.
+                                Agrega la nata y mezcla bien.
+                                Vierte sobre la base y hornea a 160°C durante 45-50 min (hasta que el centro esté
+                                ligeramente tembloroso).
+                                Deja enfriar y luego refrigera al menos 4 horas (mejor si es toda la noche).
+                            </li>
+                            <li><strong>Montaje y toque final</strong><br>
+                                Espolvorea azúcar sobre el cheesecake frío y carameliza con un soplete, creando una
+                                costra crujiente tipo crema catalana.
+                                Decora con un poco de crumble de galleta para textura extra.
+                            </li>
+                        </ol>
+                    </section>
+                </section>
             </section>
-            <section class="Ingredientes">
-                <h2>Ingredientes</h2>
-                <ul>
-                    <li>130gr de queso crema</li>
-                    <li>250gr de mascarpone</li>
-                    <li>80gr de mantequilla</li>
-                    <li>60gr de azúcar</li>
-                    <li>150gr de galletas Maria</li>
-                    <li>1 Limón</li>
-                </ul>
-            </section>
-            <section class="Instrucciones">
-                <h2>Instrucciones</h2>
-                <ol>
-                    <li><strong>Base crujiente</strong> <br>
-                        Tritura las galletas y  hasta obtener una textura arenosa.
-                        Mezcla con la mantequilla derretida y presiona la mezcla en el fondo de un molde desmontable (20 cm).
-                        Refrigere mientras prepara el relleno.</li>
-                    <li><strong>Relleno ultra cremoso</strong> <br>
-                        Bate el queso crema y el mascarpone hasta que quede suave.
-                        Agregue el azúcar y la ralladura de limón.
-                        Incorpora los huevos de uno en uno, sin batir en exceso.
-                        Agrega la nata y mezcla bien.
-                        Vierte sobre la base y hornea a 160°C durante 45-50 min (hasta que el centro esté ligeramente tembloroso).
-                        Deja enfriar y luego refrigera al menos 4 horas (mejor si es toda la noche).</li>
-                    <li><strong>Montaje y toque final</strong> <br>
-                        Espolvorea azúcar sobre el cheesecake frío y carameliza con un soplete, creando una costra crujiente tipo crema catalana.
-                        Decora con un poco de crumble de galleta para textura extra.</li>
-                    
-                </ol>
-            </section>
+        </article>
         </article>
         <aside class="informacion-extra">
             <h2>Valor nutricional</h2>
@@ -102,4 +116,5 @@
         <h4>Terminos y condiciones</h4>
     </footer>
 </body>
+
 </html>
