@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="." alt="logo">
+            <img class="header__logo" src="./img/Logo header.png" alt="logo">
         </div>
         <nav class="header__nav">
             <ul class="header__nav--list">
@@ -26,15 +26,14 @@
     <main class="main">
         <article class="cheesecake">
             <picture>
-                <img class="cheesecake-img" src="./img/receta-cheesecake-1.jpg" alt="cheesecake">
+                <img class="cheesecake-img" src="./img/tarta_cheesecake.jpg" alt="cheesecake">
                 <figcaption>Tarta cheesecake cremosa</figcaption>
             </picture>
-            </section>
             <section class="receta">
                 <section class="cheesecake__detalles">
                     <section class="Ingredientes">
                         <h2 class="Ingredientes__list">Ingredientes</h2>
-                        <ul>
+                        <ul class="Ingredientes__list--ul">
                             <li>130gr de queso crema</li>
                             <li>250gr de mascarpone</li>
                             <li>80gr de mantequilla</li>
@@ -72,10 +71,9 @@
                 </section>
             </section>
         </article>
-        </article>
         <aside class="informacion-extra">
-            <h2>Valor nutricional</h2>
-            <table>
+            <h2 class="Valor__nutricional">Valor nutricional</h2>
+            <table class="tabla">
                 <tr>
                     <th>Nutriente</th>
                     <th>Cantidad</th>
@@ -102,19 +100,29 @@
                 </tr>
                 <tr>
             </table>
-
-            <h2>Tiempo cocinado</h2>
-            <p>3h</p>
-            <h2>Otras recetas de interés</h2>
-            <img src="./img/descarga (1).jfif" alt="tarta">
-            <img src="./img/descarga.jfif" alt="tarta">
+            <h2 class="titulo-tiempo">Tiempo cocinado</h2>
+                <p>3h</p>
+        </aside>
+        <aside>
+            <div class="recetas">
+                <h2 class="galeria">Otras recetas de interés</h2>
+                <div class="imagenes">
+                    <img class="tarta_blanco" src="./img/tarta_blanco.jfif" alt="tarta">
+                    <img class="tarta_coco" src="./img/tarta_coco.jpg" alt="tarta">
+                    <img class="tarta_calabaza" src="./img/tarta_calabaza.jpg" alt="tarta">
+                    <img class="tarta_fresa" src="./img/tarta_fresa.jpg" alt="tarta">
+                    <img class="tarta_choco" src="./img/tarta_chocolate.jpg" alt="tarta">
+                </div>
+            </div>
         </aside>
 
     </main>
     <footer class="footer">
-        <h4>Comparte en redes sociales</h4>
-        <h4>Terminos y condiciones</h4>
+        <p>SR CAKE &copy; 2025 - Todos Los derechos reservados. <a href="#">Terminos y Condiciones</a></p>
     </footer>
+    <div class="bottomright">
+        <img src="./img/Logo header.png" alt="whatshap">
+    </div>
 </body>
 
 </html>

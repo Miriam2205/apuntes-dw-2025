@@ -4,25 +4,35 @@
     box-sizing: border-box;
 }
 
-.header {
+.header, .footer {
     display: flex;
     justify-content: space-between; /* Distribuye los elementos a los extremos */
     align-items: center; /* Alinea verticalmente */
     padding: 20px; /* Espaciado alrededor */
     background-color: #12250f; /* Color de fondo opcional */
+    color: #f18fbb;
+    
 }
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
 .main{
     display: flex;
     flex-direction: column;
     flex:1;
 }
 
-.logo img {
-    width: 100px; /* Ajusta el tamaño del logo según necesites */
+.header__logo{
+    width: 120px;
+    
+    
 }
 
 .header__nav {
     margin-left: auto; /* Empuja la navegación hacia la derecha */
+
 }
 
 .header__nav--list {
@@ -46,12 +56,105 @@
 .cheesecake-img {
     width: 400px; /* Se ajusta al ancho del contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
-    box-shadow: 0 2 2 2;
     padding: 40px;
 }
+
 .receta{
     display:flex;
     flex-direction: column;
     flex: 1;
     margin-top: 50px;
 }
+.Ingredientes__list{
+    display: block;
+    color: #f18fbb;
+    border-bottom: 3px solid ; /* Línea más gruesa */
+    padding-bottom: 10px; /* Espacio entre el texto y la línea */
+}
+.Instrucciones__list{
+    margin-top: 40px;
+    display: block;
+    color: rgb(241, 143, 187) ;
+    border-bottom: 3px solid ; /* Línea más gruesa */
+    padding-bottom: 10px; /* Espacio entre el texto y la línea */
+}
+.cheesecake__detalles{
+    width: 1000px;
+    height: 500px;
+    background-color: #12250f;
+    padding: 30px;
+    color: rgb(248, 199, 217);
+    border-radius: 20px;
+}
+.informacion-extra{
+width: 900px;
+height: 500px;
+background-color: #12250f;
+margin: 60px;
+margin-right: 20px;
+border-radius: 20px;
+padding: 30px;
+color: rgb(241, 143, 187);
+
+
+
+}
+.tabla {
+    width: 100%; /* La tabla ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Junta los bordes para mejor apariencia */
+    margin: 30px ;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .tabla th, .tabla td {
+    border: 2px solid #333; /* Bordes en las celdas */
+    padding: 10px; /* Espaciado dentro de las celdas */
+  }
+
+  .tabla th {
+    background-color: #0e2712; /* Fondo oscuro para encabezados */
+    color: rgb(219, 124, 187); /* Texto blanco en encabezados */
+    text-transform: uppercase; /* Letras en mayúsculas */
+  }
+
+  .tabla tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color gris claro en filas pares */
+  }
+
+  .tabla tr:hover {
+    background-color: #ddd; /* Cambio de color al pasar el cursor */
+  }
+  .titulo-tiempo{
+    margin-left: 20px;
+    flex-direction: column;
+    border-bottom: 3px solid ; /* Línea más gruesa */
+  }
+  p{
+    margin:20px
+  }
+  .galeria{
+    margin: 60px;
+  }
+  .recetas{
+    width: 800px;
+    
+  }
+  .imagenes {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Desplazamiento fluido */
+    gap: 20px;
+    padding: 10px;
+    white-space: nowrap;
+    margin: 50px;
+}
+
+.imagenes img {
+    width: 200px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Opcional, bordes redondeados */
+    scroll-snap-align: center; /* Centra cada imagen */
+}
+
