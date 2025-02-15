@@ -1,46 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de imagenes</title>
-    <style>
-         *{
-            margin: 0;
-            padding:0;
-            box-sizing: border-box;
-        }
-        .tarta{
-            width:250px;
-            height:auto;
-        }
-    
-    </style>
+    <title>Galería de Imágenes</title>
+    <link rel="stylesheet" href="./css/estilosgaleria.css">
 </head>
+
 <body>
     <header class="header">
-        <img src="logo.png" alt="logo">
-        <nav>
-            <ul>
+        <div class="logo">
+            <img class="header__logo" src="./img/Logo header.png" alt="logo">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav--list">
                 <li>Recetas</li>
                 <li>Reseñas</li>
+                <li>Galería</li>
                 <li>Perfil</li>
             </ul>
         </nav>
     </header>
+
     <main class="main">
         <article class="galeria">
-            <section class="galeria">
-            <img class=" tarta carrot cake" src="./img/descarga (1).jfif">
-            <img class="tarta red velvet" src="./img/descarga.jfif">
-            <img class="tarta chocolate" src="./img/tarta chocolate.jfif">
+            <h1>Galería de imágenes con GRID</h1>
+            <section class="grid__container">
+                <img class="grid__item" src="./img/tarta_blanco.jfif" alt="Tarta blanca">
+                <img class="grid__item" src="./img/tarta_calabaza.jpg" alt="Tarta de calabaza">
+                <img class="grid__item" src="./img/tarta_cheesecake.jpg" alt="Tarta cheesecake">
+                <img class="grid__item" src="./img/tarta_chocolate.jpg" alt="Tarta de chocolate">
+                <img class="grid__item" src="./img/tarta_coco.jpg" alt="Tarta de coco">
+                <img class="grid__item" src="./img/tarta_fresa.jpg" alt="Tarta de fresa">
             </section>
         </article>
     </main>
+
     <footer class="footer">
         <h4>Comparte en redes sociales</h4>
-        <h4>Terminos y condiciones</h4>
+        <h4>Términos y condiciones</h4>
     </footer>
-    
 </body>
+
 </html>

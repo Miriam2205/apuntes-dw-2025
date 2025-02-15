@@ -1,0 +1,73 @@
+/* Estilos generales */
+body {
+    background-image: url("./Space.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del header */
+.header, .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #12250f;
+    color: #f18fbb;
+}
+
+.footer {
+    justify-content: center;
+}
+
+.header__logo {
+    width: 120px;
+}
+
+.header__nav {
+    margin-left: auto;
+}
+
+.header__nav--list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: rgb(241, 143, 187);
+}
+
+.header__nav--list li {
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.header__nav--list li:hover {
+    color: #ff6392;
+}
+
+/* Estilos del título */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+/* Galería de imágenes con Grid */
+.grid__container {
+    width: 20%;
+    margin: 40px auto;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Estilo de cada imagen */
+
+/* Efecto al pasar el mouse sobre la imagen */
+.grid__item:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
