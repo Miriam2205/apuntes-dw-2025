@@ -30,17 +30,21 @@
 .header__list {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 15px; /* Espaciado entre los elementos */
+    gap: 50px; /* Espaciado entre los elementos */
 }
 
 /* Estilos para los ítems del menú */
 .header__item {
     font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
+    padding: 2px;
+    border: 2px solid black; /* Borde alrededor del item */
+    border-radius: 1px; /* Esquinas redondeadas (opcional) */
+    transition: background-color 0.3s ease; /* Efecto suave al pasar el cursor */
 }
+.menu-icon{
+    width: 40px;
+}
+
 
 /* Estilos para la Galería */
 .gallery {
