@@ -36,8 +36,6 @@
 .header__item {
     font-size: 18px;
     padding: 2px;
-    border: 2px solid black; 
-    border-radius: 1px; 
     transition: background-color 0.3s ease; 
 }
 .header__item a {
@@ -179,9 +177,6 @@
     color: gray;
     margin-top: 60px;
 }
-.recuadro {
-    border: 1px solid #000;
-    padding: 2px;
-    display: inline-block; }
+
 
 
