@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap:6px;
+}
+
+.header {
+    display: flex;
+    /* Activa flexbox */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 20px;
+    /* Espacio entre logo y nav */
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+.header__logo{
+    height: 20px;;
+}
+/* Estilos para el Nav */
+.header__nav {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; }
+
+/* Estilos para la lista de navegación */
+.header__list {
+    display: flex;
+    list-style: none;
+    gap: 50px; 
+}
+
+/* Estilos para los ítems del menú */
+.header__item {
+    font-size: 18px;
+    padding: 2px;
+    transition: background-color 0.3s ease; 
+}
+.header__item a {
+    text-decoration: none; 
+    color: inherit; 
+    
+}
+.menu-icon{
+    width: 40px;
+}
+
+
+/* Estilos para la Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 270px);
+    grid-template-rows: repeat(5, 270px);
+    gap: 5px; 
+    padding: 20px;
+}
+
+/* Estilos para los ítems de la galería */
+.gallery__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para las imágenes dentro de la galería */
+.gallery__image {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    text-align: center;  
+    padding: 20px;
+    
+}
+
+.footer__logo {
+    margin-bottom: 30px; }
+.footer__text {
+    font-size: 16px;
+    max-width: 600px; 
+    color: gray ;
+}
+.copyright{
+    color: gray;
+    margin-top: 60px;
+}
+
+
+
