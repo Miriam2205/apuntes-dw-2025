@@ -26,13 +26,10 @@
 
 .header__logo{
     width: 120px;
-    
-    
 }
 
 .header__nav {
     margin-left: auto; /* Empuja la navegación hacia la derecha */
-
 }
 
 .header__nav--list {

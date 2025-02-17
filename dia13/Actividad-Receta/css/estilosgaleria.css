@@ -23,10 +23,14 @@ body {
 .header__nav--list li {
     cursor: pointer;
 }
+.galeria__imagenes{
+    color:#12250f
+}
 
 .main {
     padding: 20px;
     text-align: center;
+    margin: 100px;
 }
 
 .grid__container {
