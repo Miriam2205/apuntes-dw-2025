@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cubos {
+            display: flex;
+            gap: 1em;
+            margin: 20px;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*se puede pero no se recomienda usar transition: all*/
+            transition: all 1s;
+        }
+
+        .box1:hover {
+            width: 150px;
+            height: 300px;
+            background-color: blue;
+            /*se puede, pero no se recomienda usar transition: all*/
+            transition: all 1s;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*se puede pero no se recomienda usar transition: all*/
+            transition: all 1s;
+        }
+
+        .box2:hover {
+            width: 400px;
+            height: 100px;
+            transition: all 1s;
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: transform 1s ease-in-out;
+        }
+
+        .box3:hover {
+            transform: rotate(40deg);
+            /* Gira al pasar el mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="cubos">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <a href="#" class="box box3">Click Me</a>
+    </section>
+
+    <button class="btn">Click me</button>
+</body>
+
+</html>
