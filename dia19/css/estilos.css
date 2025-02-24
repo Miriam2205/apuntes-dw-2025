@@ -19,7 +19,7 @@ body, html {
 
 /* HEADER */
 .header {
-    background-color: #d8ad6c;
+    background-color: #252525;
     color: white;
     padding: 20px;
     display: flex;
@@ -67,6 +67,7 @@ transition: transform 0.5s ease; /* Duración y tipo de transición */
     width: 30%;
     height: 50px;
     display: flex;
+
     justify-content: center;
     transition: transform 0.5s ease;
 }
