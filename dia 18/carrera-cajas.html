@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            background-color: #ccc;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+        }
+        .container:hover .box {
+            margin-left: 900px;
+        }
+
+        .container {
+            background-color: beige;
+            width: 1000px;
+        }
+        .box1 {
+            transition: margin 4s ease,
+                        background-color 1s;
+
+        }
+        .box1:hover {
+            background-color:orange;
+        }
+        .box2 {
+            transition: margin 4s linear;
+        }
+        .box3 {
+            transition: margin 4s ease-in;
+        }
+        .box4 {
+            transition: margin 4s ease-out;
+        }
+        .box5 {
+            transition: margin 4s ease-in-out;
+        }
+        .box6 {
+            transition: margin 4s cubic-bezier(0.6, -0.28 0.735, 0.045) 
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">Ease</div>
+        <div class="box box2">Linear</div>
+        <div class="box box3">Ease-in</div>
+        <div class="box box4">Ease-out</div>
+        <div class="box box5">Ease-in-out</div>
+        <div class="box box6">Cubic</div>
+    </div>
+</body>
+
+</html>
