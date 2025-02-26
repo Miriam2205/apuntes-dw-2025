@@ -1,47 +1,110 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Poppins sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-/*HEADER*/
-.header{
-    width:100%;
-    height: 50px;
-    background-color: rgb(61, 61, 61);
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
+body {
+    transition: background-color 0.5s, color 0.5s;
 }
-.btn-modooscuro{
-    display: flex;
-    justify-content: space-between;
-
-}
-/*CONTAINER*/
-.container {
+.Container {
+    
     display: grid;
-    grid-template-rows: auto 1fr 100px; 
-    grid-template-columns: 1fr; 
+    grid-template-rows: auto 1fr 100px;
+    grid-template-columns: 1fr;
     height: 100vh;
 }
-/*MAIN*/
-.hero{
-    padding: 4em;
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
-.container{
-
+.btn {
+    width: 50%;
+    height: 80px;
+    background-color: rgb(253, 3, 3);
+    transition: 3s ease;
 }
-.gallery{
-
+.btn:hover{
+    transform: rotate(90deg);
 }
 
-/*SIDEBAR*/
-.sidebar{
-    width: 300px;
-    height: 200px;
-    background-color: rgb(150, 149, 149);
+.Main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 para el contenido, 1/3 para la sidebar */
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto; /* Permite scroll si el contenido es muy grande */
+    background-color: #f4f4f4;
+    
+}
+
+.Sidebar {
+    width: 100%;
+    background-color: #444;
+    padding: 1rem;
+    height: 100vh;
+    overflow-y: auto;
+    justify-content: space-between;
+}
+
+.Content-mainHero {
+    margin-bottom: 2rem;
+}
+
+.Content-mainGallery {
+    padding: 1rem;
+    background-color: #eaeaea;
+}
+
+.Gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Gallery-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.Gallery-img:hover {
+    transform: scale(1.1);
+}
+
+.Accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.Accordion-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.Accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.Accordion-item.open .Accordion-content {
+    max-height: 100px;
+}
+
+.Footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #333;
+    color: white;
 }
