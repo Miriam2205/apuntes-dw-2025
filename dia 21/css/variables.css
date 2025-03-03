@@ -2,51 +2,23 @@
 /*         VARIABLES DE CSS         */
 /*-----------------------------------*/
 
-:root{
-    --bg-primary: #fff;
-    --bg-secondary: #f0f0f0;
-    --txt-primary: #000;
-    --txt-secondary: #222;
-
-    --box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-
-}
-/*-----------------------------------*/
-/*         MODO OSCURO               */
-/*-----------------------------------*/
-.u-Dark{
-    --bg-primary: #6050ee;
-    --bg-secondary: #f0f0f0;
-    --txt-primary: #fff;
-    --txt-secondary: #ddd;
-    --box-shadow: 1px 1px 5px rgba(255,255,255,0.5);
-
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
+body.dark-mode .Header,
+body.dark-mode .Footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .Main {
+    background-color: #2c2c2c;
+}
 
 /*---------------------------------------------*/
 /*      CLASES REUTILIZABLES(UTILITIES)        */
 /*---------------------------------------------*/
-
-.u-bgPrimary{
-    background: var(--bg-primary);
-    transition: background-color 0.3s ease;
-}
-.u-bgSecondary{
-    background: var(--bg-secondary);
-    transition: background-color 0.3s ease;
-}
-.u-txtPrimary{
-    color: var(--txt-secondary);
-    transition: color 0.3s ease;
-}
-.u-txtSecondary{
-    color: var(--txt-secondary);
-    transition: color 0.3s ease;
-}
-.u-boxShadow{
-    box-shadow: var(--box-shadow);
-}
 
 /*Modo Row/Col*/
 .u-flexCol {

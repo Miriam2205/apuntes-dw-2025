@@ -1,10 +1,16 @@
-const btnDarkLight = document.querySelector("#btnDarkLight");
-btnDarkLight.addEventListener("click", () => {
-    document.body.classList.toggle("u-Dark");
-    const span = btnDarkLight.querySelector("span");
-    span.innerText = document.body.classList.contains("u-Dark") ? "light_mode" : "dark_mode";
+//----------MODO OSCURO
+document.addEventListener('DOMContentLoaded', function() {
+    const btnDarkLight = document.getElementById('btnDarkLight');
+    const body = document.body;
+
+    btnDarkLight.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+    });
 });
 
+
+
+//---------ACORDEON---------------//
 // Codigo JS para nuestro acordeon
 // seleccionar todos los items con la clase "acordeon__item"
 const lista_items = document.querySelectorAll(".Accordion-item");

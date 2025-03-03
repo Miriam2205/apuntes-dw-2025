@@ -22,6 +22,9 @@ body {
     align-items: center;
     padding: 1rem;
 }
+.Header-title{
+    color: gray;
+}
 
 .btn {
     width: 50%;

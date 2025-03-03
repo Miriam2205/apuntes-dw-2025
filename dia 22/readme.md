@@ -64,6 +64,77 @@ alumno.saludar();
 - Manejo de Eventos: Responder a las acciones del usuario, como por ej: Hacer click, Mover el mouse, desplazarse por la web...
 - Comunicación asíncrona con servidores mediante AJAX/Fetch: enviar y recibir datos de un servidor sin tener que recargar la página.
 
+## Tipos de Datos
+- Numeros: enteros, decimales, positivos, negativos etc.
+- Cadenas de Textos (strings): textos, palabras, frases, 1 letra. Entre comillas `simples`, "dobles", o `backtickts`
+- Booleanos: verdadero o falso
+
+
+- Listas de cosas (arrays): se escriben con corchetes[] y los items se separan con coma.
+- Objectos (object): coleccion de propiedades (caracteristicas) y metodods (funcionalidades )y se esciben con{}
+```js
+
+//PRIMITIVOS//
+let texto = "Hola Alumnos de CEI";
+let textoConComillas= 'Hola estoy "muy bien"';
+let textoComillasDobles = "I'm Tomi";
+let texto = "Quiero comillas "simples" y "dobles"`;
+
+let numero = 123;
+let numero2 = "123";
+numero2 = Number(numero2);
+
+let entero = 25;
+let decimal = 22.30;
+let negativo = -5;
+const PI = 3.14159;
+
+let estaPrendido = false;
+let isPrimary = true;
+let onActive = false;
+
+
+//REFERENCIALES
+
+//objeto
+const alumno = {
+    nombre: "Mario"
+    edad: 33, 
+    isRecibido: false
+    presentarProyecto : function(){
+        isRecibido= true;
+        edad=34;
+    }
+    IrseDeVacaciones: function (){....}
+}
+
+alumno.edad; //33
+alumno.presentarProyecto(); //presenta el proyecto 
+
+
+//Listas o ARRAYS
+const alumnosDeW = ["jHON", "Maria", "Sonia"....]
+const edades = [25,32,18,49]
+const listaMixta = [
+    1,
+    "Juan"
+    true, 
+    {vali: "hola", val2: "chau"}
+]
+
+
+
+//las listas comienzan su indice en 0
+console.log(alumnosDeW[0])//jHON
+console.log(alumnosDeW[1])//mARIA
+console.log(alumnosDeW[2])//Sonia
+
+
+//Para escribir un valor en una lista 
+alumnosDeW[0]= "Jhon edward";
+console.log(alumnosDeW[])
+
+
 Ejercicio 2: Creación y acceso a objetos
 
 - Crea un objeto llamado persona con las propiedades nombre (cadena), edad (número) y ciudad (cadena).

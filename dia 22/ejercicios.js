@@ -24,14 +24,13 @@ const persona = {
 
 // 2. Imprimir en la consola el valor de la propiedad nombre del objeto persona
 console.log(persona.nombre); 
-// Salida: "Juan"
 
 // 3. Cambiar el valor de la propiedad edad a 30
 persona.edad = 30;
 
 // 4. Imprimir en la consola el objeto persona completo para verificar el cambio
 console.log(persona);
-// Salida: { nombre: "Juan", edad: 30, ciudad: "Madrid" }
+
 
 
 //Ejemplo 3//
@@ -44,31 +43,26 @@ const estudiantes = [
 
 // 2. Imprimir en la consola el nombre del segundo estudiante
 console.log(estudiantes[1].nombre); 
-// Salida: "Ana"
 
 // 3. Cambiar la nota del primer estudiante a 95
 estudiantes[0].nota = 95;
 
-
-// Salida:
-// Nombre: Carlos, Nota: 95
-// Nombre: Ana, Nota: 90
-// Nombre: Luis, Nota: 78
-
+//Ejercicio 4
 
 // 1. Crear un objeto llamado calculadora con propiedades a, b y un método sumar
 const calculadora = {
     a: 0,
     b: 0,
     sumar: function() {
-        return this.a + this.b;
+       console.log(this.a + this.b);
     }
 };
 
-// 2. Asignar valores a las propiedades a y b
-calculadora.a = 10;
-calculadora.b = 20;
+console.log(calculadora.a);
+console.log(calculadora.b);
+calculadora.sumar();
 
-// 3. Llamar al método sumar e imprimir el resultado en la consola
-console.log(calculadora.sumar()); 
-// Salida: 30
+calculadora.a = 15;
+calculadora.b = 30;
+calculadora.sumar();
+

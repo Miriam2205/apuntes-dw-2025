@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bienvenidos JavaScript</h1>
+    <div class="container">
+        <button id="suma">Suma 1</button>
+        <button id="resta">Resta 1</button>
+        <button id="multiplicar">Multiplica 5</button>
+        <h2>Cantidad de clicks</h2>
+        <p id="resultado">0</p>
+
+        Convertir este input en un input para recibir numeros. Que el usuario ingrese su edad. Y que al hacer click en
+        un boton de entrar diga si soy mayor o menor. Ayuda: elemento.value
+        <input type="numeros" id="inputEdad" placeholder="Ingresa tu edad"></input>
+        <button id="verificarEdad">Verificar edad</button>
+    </div>
+
+
+    <script>
+
+
+        const btnSumar = document.querySelector("#suma");
+        btnSumar.addEventListener("click", sumar);
+
+        const btnRestar = document.querySelector("#resta");
+        btnRestar.addEventListener("click", restar);
+
+        const btnMultiplicar = document.querySelector("#multiplicar");
+        btnMultiplicar.addEventListener("click", multiplicar);
+
+        const edadLayer = document.querySelector("#inputEdad");
+        
+        const container = document.querySelector("#resultado");
+
+        let resultado = 0;
+
+        function sumar() {
+            resultado = resultado + 1
+            imprimir();
+        }
+        ;
+        function restar() {
+            resultado = resultado - 1;
+            imprimir();
+        }
+
+        function multiplicar() {
+            resultado = resultado * 5;
+            imprimir();
+        }
+        function imprimir() {
+            container.textContent = resultado;
+            //alert(resultado);
+            console.log(resultado);
+        }
+
+        function verificaEdad() {
+            if (edadLayer.value >= 18) {
+                console.log("Eres mayor de edad")
+            } else {
+                console.log("Eres menor de edad")
+            }
+        }
+
+
+        const verificarEdadButton = document.querySelector("#verificarEdad");
+        verificarEdadButton.addEventListener("click", verificaEdad);
+        
+
+    </script>
+</body>
+
+</html>

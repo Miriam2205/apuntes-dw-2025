@@ -15,8 +15,8 @@
 /*         MODO OSCURO               */
 /*-----------------------------------*/
 .u-Dark{
-    --bg-primary: #000;
-    --bg-secondary: #f0f0f0;
+    --bg-primary: #302f2f;
+    --bg-secondary: #000000;
     --txt-primary: #fff;
     --txt-secondary: #ddd;
     --box-shadow: 1px 1px 5px rgba(255,255,255,0.5);
