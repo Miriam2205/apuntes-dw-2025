@@ -18,34 +18,37 @@
 
         Convertir este input en un input para recibir numeros. Que el usuario ingrese su edad. Y que al hacer click en
         un boton de entrar diga si soy mayor o menor. Ayuda: elemento.value
-        <input type="numeros" id="inputEdad" placeholder="Ingresa tu edad"></input>
+        <input type="number" id="inputEdad" placeholder="Ingresa tu edad"></input>
         <button id="verificarEdad">Verificar edad</button>
     </div>
 
 
     <script>
 
-
+        //Declarar variables y addeventListener
         const btnSumar = document.querySelector("#suma");
         btnSumar.addEventListener("click", sumar);
 
         const btnRestar = document.querySelector("#resta");
         btnRestar.addEventListener("click", restar);
 
-        const btnMultiplicar = document.querySelector("#multiplicar");
+        const btnMultiplicar = document.querySel0000ector("#multiplicar");
         btnMultiplicar.addEventListener("click", multiplicar);
 
         const edadLayer = document.querySelector("#inputEdad");
         
+        const verificarEdadButton = document.querySelector("#verificarEdad");
+        verificarEdadButton.addEventListener("click", verificaEdad);
+
         const container = document.querySelector("#resultado");
 
         let resultado = 0;
 
+        //Ejecutar la variables
         function sumar() {
             resultado = resultado + 1
             imprimir();
-        }
-        ;
+        };
         function restar() {
             resultado = resultado - 1;
             imprimir();
@@ -69,10 +72,6 @@
             }
         }
 
-
-        const verificarEdadButton = document.querySelector("#verificarEdad");
-        verificarEdadButton.addEventListener("click", verificaEdad);
-        
 
     </script>
 </body>

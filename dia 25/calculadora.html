@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bienvenidos JavaScript</h1>
+    <div class="container">
+        
+        
+        <p id="resultado">0</p>
+
+       
+        <input type="numero" id="inputnumber" placeholder="0"></input>
+        <button onclick="number1">1</button>
+        <button onclick="number2">2</button>
+        <button onclick="number3">3</button>
+        <button onclick="number4">4</button>
+        <button onclick="number5">5</button>
+        <button onclick="number6">6</button>
+        <button onclick="number7">7</button>
+        <button onclick="number8">8</button>
+        <button onclick="number9">9</button>
+        <button id="btnSuma">+</button>
+        <button id="btnSuma">-</button>
+        <button id="btnSuma">x</button>
+        
+
+    </div>
+
+
+    <script>
+
+        //Declarar variables y addeventListener
+       // Seleccionamos los elementos del DOM
+        const btnSumar = document.querySelector("#suma");
+        const btnRestar = document.querySelector("#resta");
+        const btnMultiplicar = document.querySelector("#multiplicar");
+        const btnResultado = document.querySelector("#resultado");
+        btnResultado = document.querySelector("#resultado")
+
+        // creamos una función que imprime en pantalla un resultado
+        function imprimirEnPantalla(numero) {
+            divResultado.innerText = "Resultado: " + numero;
+        }
+        //divResultado.innerText= numero;
+        ImprimirEnPantalla( "Haz click en los botones");
+        ImprimirEnPantalla(numero);
+
+        let numero = 0;
+
+        //Ejecutar la variables
+        btnSumar.addEventListener("click", () => {
+            numero = numero +1; // incrementado el número en 1!!
+            //numero++;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
+        });
+        btnSRestar.addEventListener("click", () => {
+            numero = numero +1; // incrementado el número en 1!!
+            //numero++;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
+        });
+
+        btnMultiplicar.addEventListener("click", () => {
+            numero = numero +1; // incrementado el número en 1!!
+            //numero++;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla(numero);
+        });
+
+        
+
+        
+
+    </script>
+</body>
+
+</html>
