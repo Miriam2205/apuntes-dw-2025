@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciales en un círculo</title>
+    <style>
+        #iniciales {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(205, 176, 233);
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%; /* Hace que sea un círculo */
+            margin-left: 10px;
+        }
+        .contenedor {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <p id="nombre">Mireia Molina</p><span id="iniciales"></span>
+    </div>
+
+    <script>
+        // 1. Seleccionamos el elemento que contiene el nombre
+        const nombre = document.querySelector("#nombre").innerText;
+        // 2. Dividimos el nombre en partes (nombre y apellido)
+        const partes = nombre.split(" ");
+        // 3. Extraemos la primera letra de cada parte
+        const inicialNombre = partes[0].slice(0,1);
+        const inicialApellido = partes[1].slice(0,1);
+        // 4. Unimos ambas iniciales
+        const iniciales = inicialNombre + inicialApellido
+         // 5. Insertamos las iniciales dentro del span con id "iniciales"
+        document.querySelector("#iniciales").textContent = iniciales;
+        
+        
+    </script>
+</body>
+
+</html>

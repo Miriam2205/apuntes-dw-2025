@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(5, 80px);
+    gap: 10px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Input ocupa toda la primera fila */
+.inputnumber {
+    grid-area: 1/1/1/4;
+    height: 60px;
+    text-align: right;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    background-color: #222;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Estilos de botones */
+.btn {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.number {
+    background-color: #666;
+    color: white;
+}
+
+#operador{
+    background-color: white;
+}

@@ -1,3 +1,6 @@
+## Operadores OR y AND
+Operador or => doble barra
+Operador and => &&
 ```js
 //Ejemplosde uso de while
 //Bucle usando mientras (while) en vez de for
@@ -41,7 +44,7 @@ function sumar(num1, num2){
 sumar(2,3); vc
 //y para imprimir esto se hace agreagando el const resultado
 const resultado = sumar(2,3);
-console.log(resultdo);
+console.log(resultado);
 
 //2.Funcion sin nombrar
 const sumar = function(num1, num2){

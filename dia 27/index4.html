@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="usuario" value="Miriam Lechuga Hernández"/>
+        <span id="resultado"></span>
+        <button id="enviar">Enviar </button>
+    </form>
+    
+<script>
+    const divRes = document.querySelector("#resultado");
+    const textArea = document.querySelector("#comentario");
+    const palabrasOfensivas = ["gatito", "perrito", "tortuga"];
+    
+    textArea.addEventListener("keyup", ()=>{
+        //leer datos
+        let texto = textArea.value;
+
+        // procesamos
+        for(i=0; i<palabrasOfensivas.length ; i++){
+            const palabra = palabrasOfensivas[i];
+            const censura = "***";
+
+            texto = texto.replaceAll(palabra, censura);
+        }
+    })
+</script>
+</body>
+</html>

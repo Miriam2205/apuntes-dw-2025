@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazo de Palabras en un Input</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <h2>Reemplazo de Palabras en un Input</h2>
+
+    <!-- Input con texto predefinido -->
+    <input type="text" id="inputTexto" value="TuMarca es genial." />
+
+    <button onclick="reemplazarPalabra()">Reemplazar</button>
+
+    
+    <!-- Div donde se mostrará el resultado -->
+    <div id="resultado"></div>
+
+    <script>
+        function reemplazarPalabra() {
+            // Obtener el valor del input
+            const texto = document.querySelector("#inputTexto").value;
+
+            // Reemplazar la palabra "TuMarca" por el mismo texto dentro de un <span> con clase
+            const textoModificado = texto.replaceAll("TuMarca", '<span class="resaltado">SuMarca</span>');
+
+            // Mostrar el resultado en el div
+            document.querySelector("#resultado").innerHTML = textoModificado;
+        }
+    </script>
+
+</body>
+
+</html>
