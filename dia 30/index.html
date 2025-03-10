@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanzar la moneda</title>
+</head>
+
+<body>
+    <h2>Lanzar moneda</h2>
+    <button id="btn">Lanzar moneda</button> <!-- Agregamos un id al botón -->
+    <div id="resultado"></div>
+    <p>Caras: <span id="cara">0</span></p>
+    <p>Cruces: <span id="cruz">0</span></p>
+    <p>Porcentaje de caras: <span id="porcentaje">0%</span></p>
+
+    <script>
+        const txtCaras = document.getElementById("cara");
+        const txtCruces = document.getElementById("cruz");
+        const txtPorcentaje = document.getElementById("porcentaje");
+        const txtResultado = document.getElementById("resultado");
+        const btn = document.getElementById("btn"); // Ahora seleccionamos el botón correctamente
+
+        let cantCaras = 0;
+        let cantCruces = 0;
+
+        btn.addEventListener("click", () => {
+            const numeroAleatorio = Math.random();
+            const moneda = numeroAleatorio > 0.5 ? "Cara" : "Cruz";
+
+            if (moneda === "Cara") {
+                cantCaras++;
+            } else {
+                cantCruces++;
+            }
+
+            const totalLanzamientos = cantCaras + cantCruces;
+            const porcentaje = (cantCaras / totalLanzamientos) * 100;
+
+            // Mostrar resultados en pantalla
+            txtResultado.innerText = `Tiraste ${moneda}`;
+            txtCaras.innerText = cantCaras;
+            txtCruces.innerText = cantCruces;
+            txtPorcentaje.innerText = Math.round(porcentaje) + '%';
+        });
+    </script>
+
+</body>
+</html>

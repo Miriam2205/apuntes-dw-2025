@@ -79,7 +79,7 @@
             //nosotros -> <a href="#Nosotros">Nosotros</>>
 
         const listaMenu = ["Home", "Nosotros", "Contacto"];
-        const navegacion = document.querySelector("menu");
+        const navegacion = document.querySelector("#menu");
         listaMenu.forEach(item =>{
             const enlace = `<a href="#${item}">${item} </a>`;
             navegacion.innerHTML += enlace;

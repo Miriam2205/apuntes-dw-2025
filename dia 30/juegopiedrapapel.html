@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego piedra, papel y tijera</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>Juego piedra, papel o tijera</h2>
+    
+        <button id ="btnPiedra" >Piedra</button>
+        <button id ="btnPapel">Papel</button>
+        <button id ="btnTijera">Tijera</button>
+        <div id="txtResultado"></div>
+
+        <p>Ganadas: <span id="txtWin">0</span></p>
+        <p>Perdidas: <span id="txtoose">0</span></p>
+        <p>Empate: <span id="txtWin">0</span></p>
+
+    <script>
+        //VARIABLES
+        //--------
+        const btnpiedra = document.querySelector("#btnPiedra");
+        const btnpapel = document.querySelector("#btnPapel");
+        const btntijera = document.querySelector("#btnTijera");
+        
+        //FUNCIONES Y ADDVENTLISTENER
+        //-----------
+        btnPiedra.addEventListener("click", ()=>{ jugar("piedra");});
+        btnPapel.addEventListener("click", ()=>{ jugar("papel");});
+        btnTijera.addEventListener("click", ()=>{ jugar("tijera");});
+
+        //jugar
+        function jugar(){
+            const jugadorIA = seleccionDeIA();//Piedra, papel o tijera (al azar)
+            console.log(`yo tire ${jugador}-la IA tiro ${jugadorIA}`)
+
+            const resultado = queJugadorGana(usuario,jugadorIA)
+            imprimirResultado();
+
+        }
+
+        //que obtuvo el ordenador
+        function seleccionDeIA(){
+            const opciones =["Piedra", "Papel", "Tijera"];
+            const num = Math.flor(Math.random()*opciones.length);
+            return opciones[num];
+        }
+
+
+        //quien gano entre j1 y j2
+        function queJugadorGana(){
+            if((j1 === "piedra" && j1 === "piedra")
+               (j1 === "piedra" && j1 === "tijeras")
+               (j1 === "papel" && j1 === "piedra")
+        ){
+        return "Gano el jugador 1";
+        }
+        }
+
+
+        //imprimir resultado
+
+      
+    </script>
+</body>
+</html>
