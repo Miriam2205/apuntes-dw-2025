@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3, evento de formulario</title>
+    <style>
+        #errorNombre{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario" action="#">
+        <label for="">Nombre</label>
+        <input type="text" name="txtNombre" id="txtNombre">
+        <span id="errorNombre">El nombre es obligatorio</span><br/>
+        <button type="submit">Enviar</button>
+        
+    </form>
+    <script>
+        const form = document.querySelector("#formulario");
+        const msgError = document.querySelector("#errorNombre");
+        const txtNombre = document.querySelector("#txtNombre");
+        form.addEventListener("submit", (e)=>{
+            e.preventDefault();
+            console.log("submit de formulario");
+            if(txtNombre.value.trim() === ""){
+                msgError.style.display = 'block';
+                alert("error");
+            }else{
+                msgError.style.display = 'none';
+                alert("OK");
+            }
+        })
+    </script>
+</body>
+</html>

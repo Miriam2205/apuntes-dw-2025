@@ -1,70 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego piedra, papel y tijera</title>
     <style>
+        /* Estilos (puedes agregarlos aquí si lo deseas) */
+        .body{
+            width: 100%;
+            background-color: gray;
+        }
         
     </style>
 </head>
-<body>
-    <h2>Juego piedra, papel o tijera</h2>
-    
-        <button id ="btnPiedra" >Piedra</button>
-        <button id ="btnPapel">Papel</button>
-        <button id ="btnTijera">Tijera</button>
-        <div id="txtResultado"></div>
 
-        <p>Ganadas: <span id="txtWin">0</span></p>
-        <p>Perdidas: <span id="txtoose">0</span></p>
-        <p>Empate: <span id="txtWin">0</span></p>
+<body class="body">
+    <h2>Juego piedra, papel o tijera</h2>
+
+    <button id="btnPiedra">Piedra</button>
+    <button id="btnPapel">Papel</button>
+    <button id="btnTijera">Tijera</button>
+    <button id="btnAutoplay">Autoplay</button>
+    <div id="txtResultado"></div>
+
+
+    <p>Ganadas: <span id="txtWin">0</span></p>
+    <p>Perdidas: <span id="txtLoose">0</span></p>
+    <p>Empates: <span id="txtEmpate">0</span></p>
 
     <script>
-        //VARIABLES
-        //--------
-        const btnpiedra = document.querySelector("#btnPiedra");
-        const btnpapel = document.querySelector("#btnPapel");
-        const btntijera = document.querySelector("#btnTijera");
-        
-        //FUNCIONES Y ADDVENTLISTENER
-        //-----------
-        btnPiedra.addEventListener("click", ()=>{ jugar("piedra");});
-        btnPapel.addEventListener("click", ()=>{ jugar("papel");});
-        btnTijera.addEventListener("click", ()=>{ jugar("tijera");});
+        // VARIABLES
+        let cantGanadas = 0;
+        let cantPerdidas = 0;
+        let cantEmpates = 0;
 
-        //jugar
-        function jugar(){
-            const jugadorIA = seleccionDeIA();//Piedra, papel o tijera (al azar)
-            console.log(`yo tire ${jugador}-la IA tiro ${jugadorIA}`)
+        const btnPiedra = document.querySelector("#btnPiedra");
+        const btnPapel = document.querySelector("#btnPapel");
+        const btnTijera = document.querySelector("#btnTijera");
 
-            const resultado = queJugadorGana(usuario,jugadorIA)
-            imprimirResultado();
+        const btnAutoplay = document.querySelector("#btnAutoplay")
 
+        // FUNCIONES Y EVENT LISTENERS
+        btnPiedra.addEventListener("click", () => { jugar("piedra"); });
+        btnPapel.addEventListener("click", () => { jugar("papel"); });
+        btnTijera.addEventListener("click", () => { jugar("tijera"); });
+        btnAutoplay.addEventListener("click", () => { AIvAI(); });
+
+        // Función principal para jugar
+
+        function jugar(jugador) {
+            const jugadorIA = seleccionDeIA(); // IA selecciona una opción
+            console.log(`El jugador eligió ${jugador}, la IA eligió ${jugadorIA}`);
+            const resultado = queJugadorGana(jugador, jugadorIA);
+
+
+            if (resultado === "Gano el jugador") {
+                cantGanadas++;
+            } else if (resultado === "Gano la IA") {
+                cantPerdidas++;
+            } else {
+                cantEmpates++;
+            }
+
+            imprimirResultado(resultado);
         }
 
-        //que obtuvo el ordenador
-        function seleccionDeIA(){
-            const opciones =["Piedra", "Papel", "Tijera"];
-            const num = Math.flor(Math.random()*opciones.length);
+        function AIvAI() {
+            //set interval repite una funcion multiples veces, dependiendo del tiempo en el 2ndo parametro
+            setInterval(() => {
+                const jugador = seleccionDeIA();
+                jugar(jugador);
+            }, 500);
+        }
+        function seleccionDeIA() {
+            const opciones = ["piedra", "papel", "tijera"];
+            const num = Math.floor(Math.random() * opciones.length);
             return opciones[num];
         }
 
-
-        //quien gano entre j1 y j2
-        function queJugadorGana(){
-            if((j1 === "piedra" && j1 === "piedra")
-               (j1 === "piedra" && j1 === "tijeras")
-               (j1 === "papel" && j1 === "piedra")
-        ){
-        return "Gano el jugador 1";
+        function queJugadorGana(j1, j2) {
+            if (j1 === j2) {
+                return "Empate";
+            } else if (
+                (j1 === "piedra" && j2 === "tijera") ||
+                (j1 === "papel" && j2 === "piedra") ||
+                (j1 === "tijera" && j2 === "papel")
+            ) {
+                return "Gano el jugador";
+            } else {
+                return "Gano la IA";
+            }
         }
+
+        function imprimirResultado(resultado) {
+            document.querySelector("#txtResultado").innerText = `Resultado: ${resultado}`;
+            document.querySelector("#txtWin").innerText = cantGanadas;
+            document.querySelector("#txtLoose").innerText = cantPerdidas;
+            document.querySelector("#txtEmpate").innerText = cantEmpates;
         }
-
-
-        //imprimir resultado
-
-      
+        function graficar(params) {
+            const total=objScore.ganadas+objScore.perdidas;
+            const
+            
+        }
     </script>
 </body>
+
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .miBloque {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+        .bloque{
+            width: 200px;
+            height: 200px;
+            background-color: lightsalmon;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="miBloque" id="miBloque"></div>
+    <button id="btnCambiarColor">Cambiar Color</button>
+    <button id="btnRojo">Cambiar a Rojo</button>
+    <button id="btnAzul">Cambiar a Azul</button>
+    <div class="bloque">
+        <span class="msg">Hola!</span>
+    </div>
+
+    <script>
+        const bloque = document.querySelector("#miBloque");
+        const btnColor = document.querySelector("#btnCambiarColor");
+        const btnRojo = document.querySelector("#btnRojo");
+        const btnAzul = document.querySelector("#btnAzul");
+        const bloque2 = document.querySelector("#bloque")
+
+        const listColores = ["red", "blue", "orange", "lightcoral", "lightgreen"];
+        let colorId = 0;
+
+        btnColor.addEventListener("click", cambiarColorSimple);
+        btnAzul.addEventListener("click", () => cambiarColor("blue"));
+        btnRojo.addEventListener("click", () => cambiarColor("red"));
+        bloque.addEventListener("click", )
+
+        function cambiarColorSimple() {
+            console.log("Cambiando color: ", listColores[colorId]); // Ahora el array está bien escrito
+            bloque.style.background = listColores[colorId];
+
+            // Hacer que los colores cambien en bucle
+            if (colorId >= listColores.length - 1) {
+                colorId = 0;
+            } else {
+                colorId++;
+            }
+        }
+
+        function cambiarColor(color) {
+            bloque.style.background = color;
+        }
+        function mensaje(){
+
+        }
+    </script>
+</body>
+</html>
