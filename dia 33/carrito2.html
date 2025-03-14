@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    <h1>Menú Cafetería</h1>
+
+    <section>
+        <h2>Café</h2>
+        <button data-cant="1" data-tipo ="cafe"  class="btn">1</button>
+        <button data-cant="2" data-tipo ="cafe" class="btn">2</button>
+        <button data-cant="3" data-tipo ="cafe" class="btn">3</button>
+    </section>
+
+    <section>
+        <h2>Bocadillo</h2>
+        <button data-cant="1" data-tipo ="boca"  class="btn">1</button>
+        <button data-cant="2" data-tipo ="boca" class="btn">2</button>
+        <button data-cant="3" data-tipo ="boca"  class="btn">3</button>
+    </section>
+
+    <section> 
+        <h2>Bebida</h2>
+        <button data-cant="1" data-tipo ="bebida"  class="btn">1</button>
+        <button data-cant="2" data-tipo ="bebida"  class="btn">2</button>
+        <button data-cant="3" data-tipo ="bebida"  class="btn">3</button>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Pedido</h2>
+        <button id="btn-total" class="btn">Total</button>
+        <button id="btn-vaciar" class="btn">Vaciar</button>
+        <div id="resultado">
+            <ul>
+                <li>Café: 0</li>
+                <li>Bocadillos: 0</li>
+                <li>Bebidas: 0</li>
+            </ul>
+            Total: 0
+        </div>
+    </section>
+
+    <script>
+        //PARTE 1, DECLARAR VARIABLES
+        const listaBotones = document.querySelectorAll(".btn");
+        listaBotones.forEach(btn =>{
+            btn.addEventListener("click", AgregarCarrito);
+        })
+
+        const btnVaciar = document.querySelector("#btn-vaciar");
+        const btnTotal = document.querySelector("#btn-total");
+        const resultado = document.querySelector("#resultado");
+
+        let totalItems = 0;
+        let cantCafe = 0;
+        let cantBoca = 0;
+        let cantBebidas = 0;
+
+
+        //PARTE 2 FUNCIONES Y ADEVENTLISTENER
+        btnCafe1.addEventListener("click", ()=>AgregarCarrito(1, "cafe"));
+        btnCafe2.addEventListener("click", ()=>AgregarCarrito(2, "cafe"));
+        btnCafe3.addEventListener("click", ()=>AgregarCarrito(3, "cafe"));
+
+        btnBoca1.addEventListener("click", ()=>AgregarCarrito(1, "boca"));
+        btnBoca2.addEventListener("click", ()=>AgregarCarrito(2, "boca"));
+        btnBoca3.addEventListener("click", ()=>AgregarCarrito(3, "boca"));
+
+        btnBebida1.addEventListener("click", ()=>AgregarCarrito(1, "bebidas"));
+        btnBebida2.addEventListener("click", ()=>AgregarCarrito(2, "bebidas"));
+        btnBebida3.addEventListener("click", ()=>AgregarCarrito(3, "bebidas"));
+
+        btnTotal.addEventListener("click", MostrarTotal);
+        btnVaciar.addEventListener("click", BorrarCarrito);
+
+        function AgregarCarrito(cant, tipo){
+            const item = e.target;
+            console.log(item);
+
+            const cant = item.getAttribute ("data-cant"));   
+            console.log("Agregando cantidad: ", cant);
+            switch(tipo){
+                case "cafe": cantCafe+=cant;break;
+                case "boca": cantCafe+=cant; break;
+                case "bebidas": cantCafe+=cant; break;
+            }
+            totoalItems += cant;
+            MostrarTotal();
+        }
+
+        function MostrarTotal(){
+            resultado.innerHTML = `
+            <ul>
+                <li>Café: ${cantCafe}</li>
+                <li>Bocadillos: ${cantBoca}</li>
+                <li>Bebidas: ${cantBebidas}</li>
+            </ul>
+            Total: ${totalItems}`;
+        }
+
+        function BorrarCarrito(){
+            let totalItems = 0;
+            let cantCafe = 0;
+            let cantBoca = 0;
+            let cantBebidas = 0;
+            MostrarTotal();
+        }
+        //REVISAR Y TERMINAR CODIGO
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    <h1>Menú Cafetería</h1>
+
+    <section>
+        <h2>Café</h2>
+        <button id="btn-Cafe-1" class="btn">1</button>
+        <button id="btn-Cafe-2" class="btn">2</button>
+        <button id="btn-Cafe-3" class="btn">3</button>
+    </section>
+
+    <section>
+        <h2>Bocadillo</h2>
+        <button id="btn-Bocadillo-1" class="btn">1</button>
+        <button id="btn-Bocadillo-2" class="btn">2</button>
+        <button id="btn-Bocadillo-3" class="btn">3</button>
+    </section>
+
+    <section>
+        <h2>Bebida</h2>
+        <button id="btn-Bebida-1" class="btn">1</button>
+        <button id="btn-Bebida-2" class="btn">2</button>
+        <button id="btn-Bebida-3" class="btn">3</button>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Pedido</h2>
+        <button id="btn-total" class="btn">Total</button>
+        <button id="btn-vaciar" class="btn">Vaciar</button>
+        <div id="resultado">
+            <ul>
+                <li>Café: 0</li>
+                <li>Bocadillos: 0</li>
+                <li>Bebidas: 0</li>
+            </ul>
+            Total: 0
+        </div>
+    </section>
+
+    <script>
+        //PARTE 1, DECLARAR VARIABLES
+        const btnCafe1 = document.querySelector("#btn-Cafe-1");
+        const btnCafe2 = document.querySelector("#btn-Cafe-2");
+        const btnCafe3 = document.querySelector("#btn-Cafe-3");
+
+        const btnBoca1 = document.querySelector("#btn-Bocadillo-1");
+        const btnBoca2 = document.querySelector("#btn-Bocadillo-2");
+        const btnBoca3 = document.querySelector("#btn-Bocadillo-3");
+
+        const btnBebida1 = document.querySelector("#btn-Bebida-1");
+        const btnBebida2 = document.querySelector("#btn-Bebida-2");
+        const btnBebida3 = document.querySelector("#btn-Bebida-3");
+
+        const btnVaciar = document.querySelector("#btn-vaciar");
+        const btnTotal = document.querySelector("#btn-total");
+
+        const resultado = document.querySelector("#resultado");
+
+        let totalItems = 0;
+        let cantCafe = 0;
+        let cantBoca = 0;
+        let cantBebidas = 0;
+
+
+        //PARTE 2 FUNCIONES Y ADEVENTLISTENER
+        btnCafe1.addEventListener("click", ()=>AgregarCarrito(1, "cafe"));
+        btnCafe2.addEventListener("click", ()=>AgregarCarrito(2, "cafe"));
+        btnCafe3.addEventListener("click", ()=>AgregarCarrito(3, "cafe"));
+
+        btnBoca1.addEventListener("click", ()=>AgregarCarrito(1, "boca"));
+        btnBoca2.addEventListener("click", ()=>AgregarCarrito(2, "boca"));
+        btnBoca3.addEventListener("click", ()=>AgregarCarrito(3, "boca"));
+
+        btnBebida1.addEventListener("click", ()=>AgregarCarrito(1, "bebidas"));
+        btnBebida2.addEventListener("click", ()=>AgregarCarrito(2, "bebidas"));
+        btnBebida3.addEventListener("click", ()=>AgregarCarrito(3, "bebidas"));
+
+        btnTotal.addEventListener("click", MostrarTotal);
+        btnVaciar.addEventListener("click", BorrarCarrito);
+
+        function AgregarCarrito(cant, tipo){
+            totalItems += cant;
+            if (tipo === "cafe") cantCafe += cant;
+            if (tipo === "boca") cantBoca += cant;
+            if (tipo === "bebidas") cantBebidas += cant;
+            MostrarTotal();
+        }
+
+        function MostrarTotal(){
+            resultado.innerHTML = `
+            <ul>
+                <li>Café: ${cantCafe}</li>
+                <li>Bocadillos: ${cantBoca}</li>
+                <li>Bebidas: ${cantBebidas}</li>
+            </ul>
+            Total: ${totalItems}`;
+        }
+
+        function BorrarCarrito(){
+            let totalItems = 0;
+            let cantCafe = 0;
+            let cantBoca = 0;
+            let cantBebidas = 0;
+            MostrarTotal();
+        }
+    </script>
+</body>
+</html>
