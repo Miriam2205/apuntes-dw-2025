@@ -3,64 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title>Reproductor de MP3</title>
     <style>
-         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            
+        .card{
+            border-radius: 8px;
+            background-color: rgb(162, 165, 165);
+            padding: 10px;
+            width: 400px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
         }
-        body {
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .temas button {
-            width: 300px;
-            height: 100px;
-            font-size: 24px;
-            font-weight: bold;
-            background-color: #afafaf;
-            color: white;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: 0.3s, transform 0.2s;
-        }
-        .temas button:hover {
-            background-color: #dacbc6;
-            transform: scale(1.05);
-        }
-        audio {
-            margin-top: 20px;
+        .controllers{
+            margin: 20px;
         }
     </style>
 </head>
 <body>
     
-        <div id="playList">
-            <div class="card">
-                <span class="artista">artistas</span>
-                <span class="mp3">cancion</span>
-            </div>
-            <div class="temas">
-                <!-- Los botones serán generados dinámicamente con JavaScript -->
-            </div>
-        </div>
-        <button id="btnplay"></button>
-        <button id="btnreplay"></button>
-        <button id="btnpause"></button>
-        
+    <div  id="playList">
+        <h3>Reproductor</h3>
+    <div class="card">
+        <span>artista</span>
+        <span>cancion</span>
+    </div>  
     </div>
 
+    <button id="btn3">Soy otro Botón</button>
+
+    <div class="controllers">
+        <button id="btnNext">Next</button>
+        <button id="btnPrev">Prev</button>
+        <button id="btnPlay">Play</button>
+        <button id="btnPause">Pause</button>
+        <button id="btn3">Tema 3</button>
+    </div>
     <script>
-        const playlist = document.querySelector("#playList")
+        const playList = document.querySelector("#playList");
+        const controllers = document.querySelector(".controllers");
+        const btn3 = document.querySelector("#btn3");
+
         const listaCanciones = [
             "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
              "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
@@ -68,28 +50,49 @@
              "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" ,
              "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" ,
         ];
-
-        const listaArtistas =[
+        const listaArtistas = [
             "Paquita la del barrio",
             "Michael jackson",
             "Quevedo",
             "Marea",
             "Rosalia"
         ];
-        const cantItems = listaArtistas.length;
+        const listaColores =["Rojo","Verde", "Azul","Naranja", "Negro"]
+        const canItems = listaArtistas.length;
 
-        listaCanciones.forEach((cancion, idx) =>{
+        listaCanciones.forEach ((cancion, idx)=>{
+            //accedemos a sus elementos relacionados
             const artista = listaArtistas[idx];
+            const color = listaColores[idx];
 
-            console.log(artista);
             console.log(cancion);
-            playList.innerHTML = `
-            
-            `
-        
+            console.log(artista);
+
+            playList.innerHTML +=`<div class="card">
+                                    <span> ${artista}</span>
+                                    <span> ${cancion}</span>
+                                </div>  
+            `;
         });
-       
-        
+
+        const handleCargarCancion = (i)=>{
+            console.log("me hicieron click en tema: ", i)
+            //imprimir en consola los datos de cancion
+            const artista = listaArtistas[i];
+            const color = listaColores[i];
+            console.log("El artista es:", artista,"y la canción es:",cancion);
+        };
+        btn3.addEventListener("click",()=> handleCargarCancion(2));
+
+        //Agregar eventlistener de click al documento
+        document.addEventListener("click",(e)=>{
+            console.log(e.target.id);
+        })
+
+        //Parte 3
+        handleCargarCancion(1);
+        handleCargarCancion(3);
+        handleCargarCancion(4);
     </script>
 </body>
-</html>
+</html> 
