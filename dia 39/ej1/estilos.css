@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parrallax-contenedor {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    text-align: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 140%;
+    background-size: cover;
+    background-position: center center;
+    /* z-index: -1; */
+}
+
+.parallax-flotante {
+    position: absolute;
+    max-width: 150px;
+    height: auto;
+    width: 100px;
+    right: 15%;
+    z-index: 2;
+}
+
+.parrallax-contenido {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    color: white;
+}
+
+.seccion.normal {
+    min-height: 20vh; /* Para poder hacer scroll */
+    padding: 40px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .parallax-bg, .parallax-elemento-flotante {
+        /* Desactivar transiciones, animaciones y efectos */
+        transition: none;
+    }
+
+    body {
+        background-color: red;
+    }
+}
